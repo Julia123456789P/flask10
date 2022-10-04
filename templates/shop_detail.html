@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ item.product }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>{{ item.product }}</h1>
+
+    <div class="alert alert-info">
+        <h4>{{ item.text }}</h4>
+        <a class="btn btn-warning" href="/shop/{{ item.id }}/update">Редактирование</a>
+        <a class="btn btn-warning" href="/shop/{{ item.id }}/del">Удаление</a>
+    </div>
+
+</div>
+{% endblock %}

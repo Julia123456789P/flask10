@@ -1,0 +1,17 @@
+.form-comment label {
+    display: inline-block;
+    min-widht: 80px
+}
+.form-comment p {morgin: 10px 0 10px 0:}
+.form_=-comment input[type=submit], textarea {
+    font-size: 16px
+}
+.flash {padding: 10px;}
+.flash.success {
+    border: 1px solid #21DB56;
+    background: #AEFFC5;
+}
+.flash.error {
+    border: 1px solid #FF434;
+    background: #FF9C9C;
+}

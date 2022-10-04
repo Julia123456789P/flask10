@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Все статьи на сайте
+{% endblock %}
+
+{% block body %}
+<div class="container"> <h2>Добавить товар на сайт?</h2>
+        <a class="btn btn-warning" href="create_shop">Добавить товар</a>
+</div>
+<div class="container mt-5">
+    <h3>Все товары на сайте</h3>
+
+    {% if items|length > 0 %}
+        {% for el in items %}
+        <div class="alert alert-info">
+            <h2>{{ el.product }}</h2>
+            <h4>{{ el.price }} рублей</h4>
+            <a class="btn btn-warning" href="/shop/{{ el.id }}">Купить</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Нет товаров на сайте</p>
+    {% endif %}
+</div>
+{% endblock %}
